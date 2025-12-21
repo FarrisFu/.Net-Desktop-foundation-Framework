@@ -1,0 +1,9 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs
+/Client_Side_Winform/Winform_Framework/ToolHelperClass/bin/Debug
+/Client_Side_Winform/Winform_Framework/ToolHelperClass/obj/Debug
+/Client_Side_Winform/Winform_Framework/Winform_Framework/bin/Debug
+/Client_Side_Winform/Winform_Framework/Winform_Framework/obj/Debug
