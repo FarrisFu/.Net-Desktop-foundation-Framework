@@ -1,0 +1,9 @@
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\bin\Debug\Winform_Framework.exe.config
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\bin\Debug\Winform_Framework.exe
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\bin\Debug\Winform_Framework.pdb
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\obj\Debug\Winform_Framework.csproj.AssemblyReference.cache
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\obj\Debug\Winform_Framework.Properties.Resources.resources
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\obj\Debug\Winform_Framework.csproj.GenerateResource.cache
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\obj\Debug\Winform_Framework.csproj.CoreCompileInputs.cache
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\obj\Debug\Winform_Framework.exe
+F:\多用户\GitRepositories\Net-Desktop-foundation-Framework\Client_Side_Winform\Winform_Framework\Winform_Framework\obj\Debug\Winform_Framework.pdb
