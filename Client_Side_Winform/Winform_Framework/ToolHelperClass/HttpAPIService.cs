@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ToolHelperClass
 {
-    class Program
+    public class HttpAPIService
     {
-        static void Main(string[] args)
-        {
-        }
+
     }
 }

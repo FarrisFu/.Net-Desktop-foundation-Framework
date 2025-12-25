@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ToolHelperClass;
 namespace Winform_Framework
 {
     public partial class Login : AntdUI.Window

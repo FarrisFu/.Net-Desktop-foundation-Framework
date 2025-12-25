@@ -16,8 +16,8 @@ namespace Winform_Framework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
-            Application.Run(new FrmMain());
+            Application.Run(new Login());
+            //Application.Run(new FrmMain());
         }
     }
 }

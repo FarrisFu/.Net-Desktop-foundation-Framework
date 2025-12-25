@@ -100,7 +100,6 @@
       <Name>ToolHelperClass</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\渐变蓝色背景图.jpg" />
   </ItemGroup>
