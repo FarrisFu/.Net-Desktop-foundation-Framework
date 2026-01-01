@@ -43,9 +43,9 @@
             this.btnCollapse = new AntdUI.Button();
             this.tabsMain = new AntdUI.Tabs();
             this.pageMain = new AntdUI.TabPage();
+            this.flpan2 = new AntdUI.In.FlowLayoutPanel();
             this.panel3 = new AntdUI.Panel();
             this.flpan1 = new AntdUI.In.FlowLayoutPanel();
-            this.flpan2 = new AntdUI.In.FlowLayoutPanel();
             this.titlebar.SuspendLayout();
             this.panLeft.SuspendLayout();
             this.tabsMain.SuspendLayout();
@@ -94,7 +94,7 @@
             this.panLeft.Location = new System.Drawing.Point(0, 40);
             this.panLeft.Name = "panLeft";
             this.panLeft.Radius = 0;
-            this.panLeft.Size = new System.Drawing.Size(58, 600);
+            this.panLeft.Size = new System.Drawing.Size(50, 600);
             this.panLeft.TabIndex = 1;
             this.panLeft.Text = "panel1";
             // 
@@ -121,7 +121,7 @@
             this.menuLeft.Location = new System.Drawing.Point(0, 0);
             this.menuLeft.Name = "menuLeft";
             this.menuLeft.Padding = new System.Windows.Forms.Padding(4);
-            this.menuLeft.Size = new System.Drawing.Size(58, 560);
+            this.menuLeft.Size = new System.Drawing.Size(50, 560);
             this.menuLeft.TabIndex = 1;
             this.menuLeft.Text = "menu1";
             this.menuLeft.SelectChanged += new AntdUI.SelectEventHandler(this.menuLeft_SelectChanged);
@@ -135,21 +135,22 @@
             this.btnCollapse.Location = new System.Drawing.Point(0, 560);
             this.btnCollapse.Name = "btnCollapse";
             this.btnCollapse.Radius = 0;
-            this.btnCollapse.Size = new System.Drawing.Size(58, 40);
+            this.btnCollapse.Size = new System.Drawing.Size(50, 40);
             this.btnCollapse.TabIndex = 3;
             this.btnCollapse.ToggleIconSvg = "MenuFoldOutlined";
             this.btnCollapse.WaveSize = 0;
+            this.btnCollapse.Click += new System.EventHandler(this.btnCollapse_Click);
             // 
             // tabsMain
             // 
             this.tabsMain.Controls.Add(this.pageMain);
-            this.tabsMain.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabsMain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabsMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabsMain.Gap = 12;
-            this.tabsMain.Location = new System.Drawing.Point(58, 40);
+            this.tabsMain.Location = new System.Drawing.Point(50, 40);
             this.tabsMain.Name = "tabsMain";
             this.tabsMain.Pages.Add(this.pageMain);
-            this.tabsMain.Size = new System.Drawing.Size(966, 600);
+            this.tabsMain.Size = new System.Drawing.Size(974, 600);
             styleCard1.Closable = true;
             styleCard1.Gap = 6;
             this.tabsMain.Style = styleCard1;
@@ -169,9 +170,18 @@
             this.pageMain.Margin = new System.Windows.Forms.Padding(4);
             this.pageMain.Name = "pageMain";
             this.pageMain.Padding = new System.Windows.Forms.Padding(4);
-            this.pageMain.Size = new System.Drawing.Size(960, 562);
+            this.pageMain.Size = new System.Drawing.Size(968, 562);
             this.pageMain.TabIndex = 0;
             this.pageMain.Text = "主页";
+            // 
+            // flpan2
+            // 
+            this.flpan2.BackColor = System.Drawing.SystemColors.Control;
+            this.flpan2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flpan2.Location = new System.Drawing.Point(4, 164);
+            this.flpan2.Name = "flpan2";
+            this.flpan2.Size = new System.Drawing.Size(960, 150);
+            this.flpan2.TabIndex = 5;
             // 
             // panel3
             // 
@@ -179,7 +189,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(4, 154);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(952, 10);
+            this.panel3.Size = new System.Drawing.Size(960, 10);
             this.panel3.TabIndex = 3;
             this.panel3.Text = "panel3";
             // 
@@ -189,17 +199,8 @@
             this.flpan1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flpan1.Location = new System.Drawing.Point(4, 4);
             this.flpan1.Name = "flpan1";
-            this.flpan1.Size = new System.Drawing.Size(952, 150);
+            this.flpan1.Size = new System.Drawing.Size(960, 150);
             this.flpan1.TabIndex = 4;
-            // 
-            // flpan2
-            // 
-            this.flpan2.BackColor = System.Drawing.SystemColors.Control;
-            this.flpan2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flpan2.Location = new System.Drawing.Point(4, 164);
-            this.flpan2.Name = "flpan2";
-            this.flpan2.Size = new System.Drawing.Size(952, 150);
-            this.flpan2.TabIndex = 5;
             // 
             // FrmMain
             // 
