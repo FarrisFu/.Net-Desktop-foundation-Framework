@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JCF.Web</name>
+    </assembly>
+    <members>
+        <member name="T:JCF.Web.Controllers.AuthController">
+            <summary>
+            权限认证
+            </summary>
+        </member>
+        <member name="M:JCF.Web.Controllers.AuthController.Login(JCF.Application.Contracts.Requests.LoginRequest)">
+            <summary>
+            用户登录接口
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:JCF.Web.Controllers.HomeController">
+            <summary>
+            数据库测试器
+            </summary>
+        </member>
+        <member name="T:JCF.Web.Controllers.UserController">
+            <summary>
+            权限测试器
+            </summary>
+        </member>
+        <member name="M:JCF.Web.Controllers.UserController.Login(JCF.Application.Contracts.Requests.LoginRequest)">
+            <summary>
+            固定登录接口
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JCF.Web.Controllers.UserController.ListUsers">
+            <summary>
+            查看用户列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCF.Web.Controllers.UserController.EditUser">
+            <summary>
+            编辑用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCF.Web.Controllers.UserController.Approve">
+            <summary>
+            审核订单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCF.Web.Extension.SqlsugarExt.InitDatabaseFromDll(SqlSugar.SqlSugarClient)">
+            <summary>
+            批量建表
+            </summary>
+            <param name="db"></param>
+        </member>
+    </members>
+</doc>

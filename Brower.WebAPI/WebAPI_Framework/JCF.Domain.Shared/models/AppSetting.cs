@@ -25,6 +25,7 @@ namespace JCF.Domain.Shared.models
     }
     public class ConnectionStrings
     {
+        public const string SectionName = "ConnectionStrings";
         /// <summary>
         /// 连接启用开关
         /// </summary>

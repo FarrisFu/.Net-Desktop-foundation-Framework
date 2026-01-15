@@ -4,6 +4,7 @@ using JCF.Web.Extension;
 using Microsoft.Extensions.Options;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using JCF.Web.Extension.Authorize;
 
 namespace JCF.Web
 {
@@ -26,10 +27,16 @@ namespace JCF.Web
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+            //添加Swagger服务扩展
             builder.Services.AddSwaggerGen();
 
-            builder.Services.Configure<AppSetting>(builder.Configuration);//配置文件绑定到实体类
-            builder.Services.AddSqlsugar(builder.Services.BuildServiceProvider().GetRequiredService<IOptions<AppSetting>>());//添加SqlSugar服务扩展
+            //添加SqlSugar服务扩展
+            builder.Services.AddSqlsugar(builder.Configuration);
+
+            //添加Jwt认证服务扩展
+            builder.Services.AddJwtAuthentication(builder.Configuration);
+            //添加授权策略服务扩展
+            builder.Services.AddAuthorizationPolicies();
 
             var app = builder.Build();
 
@@ -40,6 +47,8 @@ namespace JCF.Web
                 app.UseSwaggerUI();
             }
 
+            //添加权限验证中间件
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

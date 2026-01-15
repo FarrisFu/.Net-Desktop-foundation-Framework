@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JCF.Web.Controllers
 {
+    /// <summary>
+    /// 数据库测试器
+    /// </summary>
     [ApiController]
     [Route("[controller]/[action]")]
     public class HomeController : Controller
