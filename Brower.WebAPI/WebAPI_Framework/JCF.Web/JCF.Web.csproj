@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="9.0.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+    <PackageReference Include="log4net" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.23" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="SourceGear.sqlite3" Version="3.50.4.5" />
@@ -24,6 +25,12 @@
     <ProjectReference Include="..\JCF.Domain.Shared\JCF.Domain.Shared.csproj" />
     <ProjectReference Include="..\JCF.Domain\JCF.Domain.csproj" />
     <ProjectReference Include="..\JCF.Infrastructure\JCF.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

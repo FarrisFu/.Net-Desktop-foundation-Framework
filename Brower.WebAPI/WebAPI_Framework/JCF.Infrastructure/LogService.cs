@@ -1,13 +1,6 @@
 ﻿using log4net;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace ToolHelperClass
+namespace JCF.Infrastructure
 {
     /// <summary>
     /// 单例日志服务类Log4net
@@ -18,8 +11,6 @@ namespace ToolHelperClass
 
         static LogService()
         {
-            System.IO.FileInfo fileinfo = new System.IO.FileInfo($"{AppDomain.CurrentDomain.BaseDirectory}/Config/log4net.config");
-            log4net.Config.XmlConfigurator.Configure(fileinfo);
             Logger = LogManager.GetLogger(typeof(LogService));
         }
 
@@ -51,7 +42,7 @@ namespace ToolHelperClass
         public static void Error(object message, Exception ex)
         {
             Logger.Error(message, ex);
-        }      
+        }
 
         public static void Warn(object message)
         {
@@ -61,6 +52,6 @@ namespace ToolHelperClass
         public static void Warn(object message, Exception ex)
         {
             Logger.Warn(message, ex);
-        }       
+        }
     }
 }

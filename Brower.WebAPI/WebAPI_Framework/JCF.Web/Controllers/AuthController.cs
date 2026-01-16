@@ -1,5 +1,6 @@
 ﻿using JCF.Application.Contracts.Requests;
 using JCF.Application.Services;
+using JCF.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JCF.Web.Controllers
@@ -27,7 +28,7 @@ namespace JCF.Web.Controllers
         public async Task<IActionResult> Login(LoginRequest user)
         {
             try
-            {
+            {               
                 var response = await _authService.Login(user);
                 return Ok(response);
             }
