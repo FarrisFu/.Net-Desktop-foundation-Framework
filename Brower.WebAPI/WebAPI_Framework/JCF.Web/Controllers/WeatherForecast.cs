@@ -1,4 +1,4 @@
-namespace JCF.Web
+namespace JCF.Web.Controllers
 {
     public class WeatherForecast
     {

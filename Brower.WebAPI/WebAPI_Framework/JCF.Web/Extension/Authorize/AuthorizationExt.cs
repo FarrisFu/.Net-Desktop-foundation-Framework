@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 namespace JCF.Web.Extension.Authorize
 {
-    public static class AuthorizationExtensions
+    public static class AuthorizationExt
     {
         public static IServiceCollection AddAuthorizationPolicies(this IServiceCollection services)
         {

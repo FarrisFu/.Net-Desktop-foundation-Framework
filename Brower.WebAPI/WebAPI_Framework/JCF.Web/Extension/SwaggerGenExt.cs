@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace JCF.Web.Extension
 {
-    public static class SwaggerGenExtention
+    public static class SwaggerGenExt
     {
         public static void AddSwaggerGen(this IServiceCollection services)
         {

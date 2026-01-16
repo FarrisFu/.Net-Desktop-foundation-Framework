@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using JCF.Web.Extension.Authorize;
+using JCF.Web.Middlewares;
 
 namespace JCF.Web
 {
@@ -13,6 +14,9 @@ namespace JCF.Web
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            //添加Log4Net日志组件扩展
+            builder.AddLog4Net();
 
             //创建Autofac容器
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
@@ -27,6 +31,8 @@ namespace JCF.Web
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+
+
             //添加Swagger服务扩展
             builder.Services.AddSwaggerGen();
 
@@ -45,12 +51,19 @@ namespace JCF.Web
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                // 开发人员异常页
+                //app.UseDeveloperExceptionPage();
             }
+
+            //添加全局异常处理中间件
+            app.UseMiddleware<GlobalExceptionMiddleware>();
 
             //添加权限验证中间件
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //添加请求响应日志中间件
+            app.UseMiddleware<RequestResponseLoggingMiddleware>();
 
             app.MapControllers();
 

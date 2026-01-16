@@ -2,6 +2,7 @@
 using JCF.Application.Contracts.Results;
 using JCF.Domain.Entitys;
 using JCF.Domain.IRepositories;
+using JCF.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace JCF.Application.Services
             var user = await _userRepository.Query(p => p.UserName == request.UserName && p.Password == request.Password);
             if (user.Count != 1)
             {
+                LogService.Warn($"用户名或密码错误,user={request.UserName}");
                 throw new UnauthorizedAccessException("用户名或密码错误");
             }
 
