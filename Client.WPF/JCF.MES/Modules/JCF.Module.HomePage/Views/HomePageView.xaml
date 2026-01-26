@@ -1,0 +1,21 @@
+﻿<UserControl
+    x:Class="JCF.Module.HomePage.Views.HomePageView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:JCF.Module.HomePage.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    Width="500"
+    Height="500"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="BurlyWood"
+    mc:Ignorable="d">
+    <Grid>
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="Bold"
+            Text="欢迎使用JCF.MES系统框架" />
+    </Grid>
+</UserControl>
