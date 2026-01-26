@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="JCF.Module.Order.Views.OrderView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="http://prismlibrary.com/"
+    Width="500"
+    Height="500"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="Aquamarine">
+    <Grid>
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="Bold"
+            Text="order" />
+    </Grid>
+</UserControl>

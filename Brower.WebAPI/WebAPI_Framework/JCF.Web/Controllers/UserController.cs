@@ -3,6 +3,7 @@ using JCF.Application.Contracts.Requests;
 using JCF.Application.Services;
 using JCF.Domain.Entitys;
 using JCF.Domain.IRepositories;
+using JCF.Web.Filters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -78,6 +79,7 @@ namespace JCF.Web.Controllers
         /// <returns></returns>
         [Authorize(Policy = "OrderApprove")]
         [HttpPost()]
+        [OneRunResourceFilterAttribute]
         public IActionResult Approve()
         {
             return Ok("订单已审核");

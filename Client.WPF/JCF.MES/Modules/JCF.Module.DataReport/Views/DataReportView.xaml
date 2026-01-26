@@ -1,0 +1,17 @@
+﻿<UserControl
+    x:Class="JCF.Module.DataReport.Views.DataReportView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="http://prismlibrary.com/"
+    Width="500"
+    Height="500"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="Red">
+    <Grid>
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="Bold"
+            Text="datareport" />
+    </Grid>
+</UserControl>
