@@ -13,57 +13,30 @@ namespace JCF.Module.TabHost.ViewModels
 {
     public class TabHostViewModel : BindableBase
     {
-        IModuleManager moduleManager;
+       
         IRegionManager regionManager;
         IEventAggregator eventAggregator;
-        public TabHostViewModel(IRegionManager region, IModuleManager moduleManager, IEventAggregator eventAggregator)
+        public TabHostViewModel(IRegionManager region,  IEventAggregator eventAggregator)
         {
-            this.moduleManager = moduleManager;
+           
             this.regionManager = region;
             this.eventAggregator = eventAggregator;
 
             this.eventAggregator.GetEvent<OpenMenuEvent>().Subscribe(OpenMenu, ThreadOption.UIThread);
         }
         #region Action
-        private void OpenMenu(Menu value)
+        private void OpenMenu(MenuItem value)
         {
             regionManager.RequestNavigate("TabRegion", value.ViewName);
         }
         #endregion
 
 
-        #region 通知属性
-        private List<Menu> _Menus = new List<Menu>()
-        {
-            new Menu(){ Title="首页", ViewName="HomePageView", ModuleName="HomePageModule"},
-            new Menu(){ Title="数据统计页", ViewName="OrderView", ModuleName="OrderModule"},
-            new Menu(){ Title="订单页", ViewName="DataReportView", ModuleName="DataReportModule"}
-        };
-
-        public List<Menu> Menus
-        {
-            get { return _Menus; }
-            set { SetProperty(ref _Menus, value); }
-        }
+        #region 通知属性      
         #endregion
 
         #region 命令
-        private DelegateCommand _LoadedCommand;
-        public DelegateCommand LoadedCommand =>
-            _LoadedCommand ?? (_LoadedCommand = new DelegateCommand(ExecuteCommandName));
-
-        void ExecuteCommandName()
-        {
-            foreach (var item in Menus)
-            {
-                moduleManager.LoadModule(item.ModuleName);
-            }
-
-            //foreach (var item in Menus)
-            //{
-            //    regionManager.RequestNavigate("TabRegion", item.ViewName);
-            //}
-        }
+        
 
         private DelegateCommand<object> _CloseCommand;
         public DelegateCommand<object> CloseCommand =>

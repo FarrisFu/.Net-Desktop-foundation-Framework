@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JCF.Common\JCF.Common.csproj" />
+  </ItemGroup>
+
 </Project>

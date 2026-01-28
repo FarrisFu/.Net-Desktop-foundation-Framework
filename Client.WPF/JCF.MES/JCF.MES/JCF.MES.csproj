@@ -5,11 +5,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="HandyControl" Version="3.5.1" />
+    <PackageReference Include="LayUI.Wpf" Version="1.1.1" />
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JCF.Common\JCF.Common.csproj" />
+    <ProjectReference Include="..\JCF.Module.Login\JCF.Module.Login.csproj" />
+    <ProjectReference Include="..\JCF.Module.Main\JCF.Module.Main.csproj" />
     <ProjectReference Include="..\JCF.Service\JCF.Service.csproj" />
     <ProjectReference Include="..\Modules\JCF.Module.DataReport\JCF.Module.DataReport.csproj" />
     <ProjectReference Include="..\Modules\JCF.Module.HomePage\JCF.Module.HomePage.csproj" />

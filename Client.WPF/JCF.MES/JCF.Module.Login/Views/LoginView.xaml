@@ -1,0 +1,120 @@
+﻿<UserControl
+    x:Class="JCF.Module.Login.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Lay="clr-namespace:LayUI.Wpf.Controls;assembly=LayUI.Wpf"
+    xmlns:prism="http://prismlibrary.com/"
+    Width="380"
+    Height="420"
+    prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Background="#F9FAFB">
+        <Border
+            Width="360"
+            Padding="30"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="White"
+            CornerRadius="12">
+            <StackPanel>
+                <!--  标题  -->
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    FontSize="22"
+                    FontWeight="SemiBold"
+                    Foreground="#111827"
+                    Text="系统登录" />
+
+                <TextBlock
+                    Margin="0,6,0,26"
+                    HorizontalAlignment="Center"
+                    FontSize="13"
+                    Foreground="#6B7280"
+                    Text="请使用您的账号登录系统" />
+
+                <!--  用户名  -->
+                <TextBlock
+                    Margin="0,0,0,4"
+                    FontSize="12"
+                    Foreground="#6B7280"
+                    Text="用户名" />
+
+                <Lay:LayTextBox
+                    Width="auto"
+                    Height="40"
+                    Padding="10,0"
+                    VerticalContentAlignment="Center"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    FontSize="14"
+                    Text="{Binding UserName}"
+                    Watermark="请输入用户名">
+                    <Lay:LayTextBox.InnerLeftContent>
+                        <Grid>
+                            <TextBlock
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                FontFamily="{DynamicResource IconFont}"
+                                FontSize="18"
+                                Text="&#xe9d8;" />
+                        </Grid>
+                    </Lay:LayTextBox.InnerLeftContent>
+                </Lay:LayTextBox>
+
+                <!--  密码  -->
+                <TextBlock
+                    Margin="0,14,0,4"
+                    FontSize="12"
+                    Foreground="#6B7280"
+                    Text="密码" />
+
+                <Lay:LayPasswordBox
+                    Height="40"
+                    Padding="10,0"
+                    VerticalAlignment="Center"
+                    Background="White"
+                    BorderBrush="#E5E7EB"
+                    BorderThickness="1"
+                    FontSize="14"
+                    IsShowPasswrod="True"
+                    Text="{Binding Password}">
+                    <Lay:LayPasswordBox.InnerLeftContent>
+                        <Grid>
+                            <TextBlock
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                FontFamily="{DynamicResource IconFont}"
+                                FontSize="18"
+                                Text="&#xec7c;" />
+                        </Grid>
+                    </Lay:LayPasswordBox.InnerLeftContent>
+                </Lay:LayPasswordBox>
+
+                <!--  登录按钮  -->
+                <Border
+                    Height="42"
+                    Margin="0,24,0,0"
+                    Background="#2563EB"
+                    CornerRadius="6"
+                    Cursor="Hand">
+
+                    <Button
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Command="{Binding LoginCommand}"
+                        Content="登 录"
+                        FontSize="14"
+                        Foreground="White" />
+                </Border>
+
+                <!--  错误提示  -->
+                <TextBlock
+                    Margin="0,12,0,0"
+                    FontSize="12"
+                    Foreground="#DC2626"
+                    Text="{Binding Error}"
+                    TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
