@@ -32,7 +32,7 @@ namespace JCF.Module.Main.ViewModels
             set => SetProperty(ref _isMenuExpanded, value);
         }
         public GridLength MenuWidth => IsMenuExpanded
-        ? new GridLength(200)
+        ? new GridLength(150)
         : new GridLength(60);
         #endregion
 

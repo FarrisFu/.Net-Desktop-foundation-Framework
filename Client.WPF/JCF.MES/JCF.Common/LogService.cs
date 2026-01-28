@@ -1,6 +1,6 @@
 ﻿using log4net;
 
-namespace JCF.Infrastructure
+namespace JCF.Common
 {
     /// <summary>
     /// 单例日志服务类Log4net

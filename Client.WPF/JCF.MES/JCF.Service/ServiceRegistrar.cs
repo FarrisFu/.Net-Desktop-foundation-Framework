@@ -18,6 +18,7 @@ namespace JCF.Service
         public static void RegisterServices(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register<IAuthorizeService, AuthorizeService>();
+            containerRegistry.Register<IGetOrderService, GetOrderService>();
         }
     }
 }

@@ -2,14 +2,66 @@
     x:Class="JCF.MES.Views.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Lay="clr-namespace:LayUI.Wpf.Controls;assembly=LayUI.Wpf"
     xmlns:controls="https://handyorg.github.io/handycontrol"
     xmlns:prism="http://prismlibrary.com/"
     Title="JCF.MES系统框架"
     Width="1280"
     Height="720"
     prism:ViewModelLocator.AutoWireViewModel="True"
-    WindowStartupLocation="CenterScreen">
+    AllowsTransparency="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None">
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="MainRegion" />
+        <Lay:LayTitleBar
+            Background="#76B1FE"
+            CornerRadius="4"
+            ResizeMode="CanResize">
+            <Lay:LayTitleBar.Header>
+                <Border Height="40">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                            Margin="10,0"
+                            VerticalAlignment="Center"
+                            Foreground="White"
+                            Text="JCF.MES系统框架" />
+                        <StackPanel
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal"
+                            WindowChrome.IsHitTestVisibleInChrome="true">
+                            <TextBlock Foreground="White" Text="管理员" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Lay:LayTitleBar.Header>
+            <Border BorderBrush="{DynamicResource Black}" BorderThickness="0,1,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Border>
+                        <ContentControl prism:RegionManager.RegionName="MainRegion" />
+                    </Border>
+                    <Lay:LayNoticeBar
+                        Grid.Row="1"
+                        Height="30"
+                        Padding="10,0"
+                        BorderBrush="{DynamicResource Black}"
+                        BorderThickness="0,1,0,0"
+                        Foreground="White"
+                        Duration="60">
+                        <TextBlock VerticalAlignment="Center" Text="底部信息显示栏" />
+                    </Lay:LayNoticeBar>
+                </Grid>
+            </Border>
+        </Lay:LayTitleBar>
+        <!--<ContentControl prism:RegionManager.RegionName="MainRegion" />-->
     </Grid>
 </Window>

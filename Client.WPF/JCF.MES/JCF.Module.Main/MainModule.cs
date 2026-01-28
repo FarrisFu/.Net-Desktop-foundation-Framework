@@ -9,7 +9,7 @@ namespace JCF.Module.Main
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            containerProvider.Resolve<IRegionManager>().RegisterViewWithRegion("MainRegion", typeof(MainView));
+            //containerProvider.Resolve<IRegionManager>().RegisterViewWithRegion("MainRegion", typeof(MainView));
 
         }
 

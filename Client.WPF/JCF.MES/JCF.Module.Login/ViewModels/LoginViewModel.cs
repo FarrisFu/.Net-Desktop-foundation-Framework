@@ -14,14 +14,15 @@ namespace JCF.Module.Login.ViewModels
 {
     public class LoginViewModel : BindableBase
     {
+        private readonly IAuthorizeService _authService;
+        private readonly IRegionManager _regionManager;
         public LoginViewModel(IAuthorizeService authService, IRegionManager regionManager)
         {
             _authService = authService;
             _regionManager = regionManager;
             LoginCommand = new DelegateCommand(async () => await Login());
         }
-        private readonly IAuthorizeService _authService;
-        private readonly IRegionManager _regionManager;
+        
 
 
 

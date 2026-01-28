@@ -25,6 +25,13 @@ namespace JCF.MES
             return Container.Resolve<MainWindow>();
         }
 
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+            var regionManager = Container.Resolve<IRegionManager>();
+            //regionManager.RequestNavigate("MainRegion", "MainView");
+            regionManager.RequestNavigate("MainRegion", "LoginView");
+        }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
 

@@ -25,7 +25,7 @@ namespace JCF.Module.TabHost.ViewModels
             this.eventAggregator.GetEvent<OpenMenuEvent>().Subscribe(OpenMenu, ThreadOption.UIThread);
         }
         #region Action
-        private void OpenMenu(Menu value)
+        private void OpenMenu(MenuItem value)
         {
             regionManager.RequestNavigate("TabRegion", value.ViewName);
         }

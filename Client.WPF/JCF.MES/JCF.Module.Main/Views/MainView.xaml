@@ -11,26 +11,30 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="MenuColum" Width="{Binding MenuWidth}" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!--  左侧菜单  -->
-        <Border Grid.Row="1" Grid.Column="0">
+        <Border Grid.Row="1">
+            <ContentControl prism:RegionManager.RegionName="LeftMenuRegin" />
+        </Border>
+
+        <!--<Border Grid.Row="1" Grid.Column="0">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="30" />
                 </Grid.RowDefinitions>
-                <!--  菜单 Region  -->
+        -->
+        <!--  菜单 Region  -->
+        <!--
                 <ContentControl Grid.Row="0" prism:RegionManager.RegionName="LeftMenuRegin" />
 
-                <!--  伸缩按钮  -->
+        -->
+        <!--  伸缩按钮  -->
+        <!--
                 <Button
                     Grid.Row="1"
                     Margin="2"
@@ -43,20 +47,19 @@
                         Text="≡" />
                 </Button>
             </Grid>
-        </Border>
+        </Border>-->
 
 
         <!--  顶部标题栏  -->
-        <ContentControl
+        <!--<ContentControl
             Grid.Row="0"
             Grid.Column="0"
             Grid.ColumnSpan="2"
-            prism:RegionManager.RegionName="TopBarRegin" />
+            prism:RegionManager.RegionName="TopBarRegin" />-->
 
         <!--  中部Tab宿主  -->
-        <ContentControl
-            Grid.Row="1"
-            Grid.Column="1"
-            prism:RegionManager.RegionName="TabHostRegin" />
+        <Border Grid.Column="1">
+            <ContentControl prism:RegionManager.RegionName="TabHostRegin" />
+        </Border>
     </Grid>
 </UserControl>

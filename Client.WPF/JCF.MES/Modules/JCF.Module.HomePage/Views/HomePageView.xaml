@@ -6,8 +6,6 @@
     xmlns:local="clr-namespace:JCF.Module.HomePage.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
-    Width="500"
-    Height="500"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Background="BurlyWood"
     mc:Ignorable="d">
@@ -15,6 +13,7 @@
         <TextBlock
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            FontSize="60"
             FontWeight="Bold"
             Text="欢迎使用JCF.MES系统框架" />
     </Grid>

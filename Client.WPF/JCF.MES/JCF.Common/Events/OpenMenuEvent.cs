@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JCF.Common.Events
 {
-    public class OpenMenuEvent:PubSubEvent<Menu>
+    public class OpenMenuEvent:PubSubEvent<MenuItem>
     {
     }
 }

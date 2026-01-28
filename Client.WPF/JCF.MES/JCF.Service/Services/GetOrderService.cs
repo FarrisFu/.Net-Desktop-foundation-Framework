@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace JCF.Service.Services
 {
-    public class AuthorizeService : IAuthorizeService
+    internal class GetOrderService : IGetOrderService
     {
-        public async Task<HttpResult<LoginResult>> Login(LoginRequest user)
+        public async Task<HttpResult<GetOrdersResult>> GetOrders()
         {
-            var  result = await HttpHelper.PostAsync<LoginRequest, LoginResult>("Auth/login", user);
+            var result = await HttpHelper.GetAsync<GetOrdersResult>("Order/GetOrders");
             return result;
         }
     }

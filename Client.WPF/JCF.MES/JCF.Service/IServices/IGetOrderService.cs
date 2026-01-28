@@ -1,5 +1,4 @@
 ﻿using JCF.Service.HttpCore;
-using JCF.Service.ModelRequests;
 using JCF.Service.ModelResults;
 using System;
 using System.Collections.Generic;
@@ -9,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace JCF.Service.IServices
 {
-    public interface IAuthorizeService
+    public interface IGetOrderService
     {
-        Task<HttpResult<LoginResult>> Login(LoginRequest user);
+        Task<HttpResult<GetOrdersResult>> GetOrders();
     }
 }
