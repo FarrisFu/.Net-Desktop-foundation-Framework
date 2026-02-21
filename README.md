@@ -35,8 +35,7 @@
 | **MES 客户端** | 工艺管理中枢 | 二线工艺人员 | 生产流程管控、订单计划、参数配置、质量管理 |
 | **WinForm 客户端** | 一线执行终端 | 一线操作人员 | 工序操作、现场数据采集、生产执行 |
 
-![整体架构图](img/all.png)
-<img src="img/all.png" width="500" alt="截图">
+<img src="img/all.png" width="500" alt="系统整体架构图">
 *图1：系统整体架构图*
 
 ---
@@ -63,8 +62,8 @@
 | **领域层** | JCF.Domain <br> JCF.Domain.Shared | 数据库操作接口、实体定义、仓储接口 |
 | **基础层** | JCF.Infrastructure | 数据库实现、日志服务、第三方集成 |
 
-![后端架构图](https://raw.githubusercontent.com/[你的仓库URL]/[你的分支名]/Docs/Architecture/Backend_DDD.png)
-*图3：DDD四层架构图*
+<img src="img/webapi.png" width="500" alt="DDD四层架构图">
+*图2：DDD四层架构图*
 
 ---
 
@@ -83,12 +82,10 @@
 - **标准化布局**：顶部标题栏 + 中部工作区 + 底部状态栏，符合企业管理软件操作习惯。
 - **全生命周期管理**：订单管理、工艺流程配置、数据报表、用户权限管理等。
 
-#### 功能预览
-![MES登录页](https://raw.githubusercontent.com/[你的仓库URL]/[你的分支名]/Docs/Screenshots/MES_Login.png)
-*图4：MES客户端登录界面*
-
-![订单管理](https://raw.githubusercontent.com/[你的仓库URL]/[你的分支名]/Docs/Screenshots/MES_Order_Management.png)
-*图5：订单全生命周期管理界面*
+<img src="img/mes.png" width="500" alt="MES客户端架构">
+*图3：MES客户端架构*
+<img src="img/mes1.png" width="500" alt="订单界面">
+*图4：订单界面*
 
 ---
 
@@ -103,9 +100,11 @@
 - **双数据模式**：同时支持 **远程 WebApi** 联网模式与 **本地数据库** 离线模式，适配车间网络不稳定场景。
 - **统一工具集**：内置串口管理、本地日志、弹窗管理等常用工具，工具类统一管理。
 
-#### 功能预览
-![WinForm客户端预览](https://raw.githubusercontent.com/[你的仓库URL]/[你的分支名]/Docs/Screenshots/WinForm_Client.png)
-*图2：一线生产执行界面*
+
+<img src="img/winform.png" width="500" alt="WinForm 客户端架构">
+*图5：WinForm 客户端架构*
+<img src="img/winform1.png" width="500" alt="主界面">
+*图6：主界面*
 
 ---
 
