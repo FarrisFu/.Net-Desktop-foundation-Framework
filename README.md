@@ -11,9 +11,9 @@
 ## 目录
 - [整体架构设计](#整体架构设计)
 - [核心模块详解](#核心模块详解)
-  - [1. WinForm 客户端 (JCF.Client)](#1-winform-客户端-jcfclient)
-  - [2. WebApi 后端框架](#2-webapi-后端框架)
-  - [3. MES 客户端框架 (JCF.MES)](#3-mes-客户端框架-jcfmes)
+  - [1. WebApi 后端框架](#2-webapi-后端框架)
+  - [2. MES 客户端框架 (JCF.MES)](#3-mes-客户端框架-jcfmes)
+  - [3. WinForm 客户端 (JCF.Client)](#1-winform-客户端-jcfclient)
 - [技术栈总览](#技术栈总览)
 - [核心优势](#核心优势)
 - [适用场景](#适用场景)
@@ -43,23 +43,23 @@
 ## 核心模块详解
 
 ### 1. WebApi 后端框架
-系统的大脑，负责处理核心业务逻辑、数据持久化与安全认证。
+为 MES 客户端、WinForm 客户端提供标准化 API 接口服务，承担系统核心数据处理、业务逻辑执行、权限管控等职能。
 
 #### 技术基础
-基于 **ASP.NET WebAPI**，采用 **领域驱动设计 (DDD) 四层架构**。
+基于 **ASP.NET WebAPI**，采用 **领域驱动设计 (DDD) 四层架构**，集成 SqlSugar ORM、Autofac 依赖注入、JWT 身份验证、PBAC 权限控制。
 
 #### 核心设计
-1. **DDD 四层架构**：严格区分用户接口层、应用层、领域层、基础层，业务逻辑高内聚。
+1. **DDD 四层架构**：领域驱动设计分层方案，实现业务逻辑与技术细节解耦。
 2. **轻量高效**：集成 SqlSugar ORM 实现灵活查询，Autofac 实现高效依赖注入。
-3. **安全可控**：JWT 无状态认证 + PBAC 权限模型，确保细粒度接口安全。
+3. **安全可控**：PBAC 组策略权限验证，方便权限的增删改。
 4. **可观测性**：全局异常处理 + 请求响应日志，系统运行状态全链路可追溯。
 
 #### DDD 四层架构详情
 | 层级 | 核心项目 | 核心职能 |
 | :--- | :--- | :--- |
 | **用户接口层** | JCF.Web | API 接口暴露、请求转发、中间件配置 |
-| **应用层** | JCF.Application <br> JCF.Application.Contracts | 业务流程编排、DTO 数据转换 |
-| **领域层** | JCF.Domain <br> JCF.Domain.Shared | 核心业务逻辑、实体定义、仓储接口 |
+| **应用层** | JCF.Application <br> JCF.Application.Contracts | 业务逻辑处理、DTO 数据转换 |
+| **领域层** | JCF.Domain <br> JCF.Domain.Shared | 数据库操作接口、实体定义、仓储接口 |
 | **基础层** | JCF.Infrastructure | 数据库实现、日志服务、第三方集成 |
 
 ![后端架构图](https://raw.githubusercontent.com/[你的仓库URL]/[你的分支名]/Docs/Architecture/Backend_DDD.png)
